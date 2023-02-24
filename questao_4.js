@@ -30,7 +30,7 @@ const faturamento = [];
 estados.forEach((estado) => {
   faturamento.push({
     sigla: estado.sigla == "" ? "outros" : estado.sigla,
-    percentual: total / estado.valor,
+    percentual: (total - estado.valor) / total,
   });
 });
 
